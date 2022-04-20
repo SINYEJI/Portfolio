@@ -1,0 +1,420 @@
+@charset "utf-8";
+
+
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: #706b69;}
+html, body {
+    color: #706b69;
+    min-width: 1280px; 
+    background-color: #d4cbc6; 
+}
+
+/* header */
+header {
+    height: 80px;
+    line-height: 80px;
+}
+header div {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+header div h1 a {
+    font-size: 25px;
+}
+header div a {
+    font-size: 20px;
+}
+
+/* .main_visual */ 
+.main_visual {
+    width: 100%;
+    height: calc(100vh - 80px);
+    /* 높이 : 브라우저전체높이 빼기 헤더값 */
+    position: relative; 
+}
+.main_visual figure {
+    width: 100%;
+    height: 100%;
+}
+.main_visual figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main_visual .title {
+    background-color: #d4cbc6; 
+    width: 1280px;
+    /* margin: 0 auto; */
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    /* 변형 : 이동x축 -> 본인이 가진 너비의 반만큼 역으로 이동 */
+    
+    color: 706b69;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.main_visual .title h2{
+    width: 100%;
+    font-size: 50px;
+}
+.main_visual .title p {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding-right: 50%;
+}
+.main_visual .title a {
+    color: #d4cbc6;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #97918d;
+    text-align: center;
+    display: block;
+}
+
+/*.best_v*/
+.best_v {
+    /* background: url('../images/파일명.확장자명'); */
+    padding: 100px 0;
+}
+.best_v .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.best_v .title h3 {
+    font-size: 40px;
+}
+.best_v .title p {
+    font-size: 20px;
+}
+.best_v .cont {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.best_v .cont .youtube {
+    width: 50%;
+}
+.best_v .cont .youtube .youtube_in {
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 화면비율 16:9 */
+    position: relative;
+}
+.best_v .cont .youtube .youtube_in iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.best_v .cont .info {
+    width: 45%;
+}
+.best_v .cont .info h4 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.best_v .cont .info p:nth-of-type(2) {
+    margin: 20px 0 40px;
+    /* 외부여백 위20px 아래40px */
+}
+.best_v .cont .info dl {
+    display: flex;
+    margin-bottom: 10px;
+}
+.best_v .cont .info dl dt {
+    font-weight: bold;
+    width: 140px;
+}
+.best_v .cont .info ul {
+    display: flex;
+}
+.best_v .cont .info ul li a {
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #97918d;
+    box-sizing: border-box;
+    /* 테두리 : 1px 직선 색상 */ 
+    /* 테두리를 포함해서 높이(45px))가 잡힐 수 있도록 설정 */
+    display: block;
+    padding: 0 25px;
+    margin-right: 10px;
+}
+.best_v .cont .info ul li:nth-child(1) a {
+    background-color: #97918d;
+    color: #d4cbc6;;
+}
+
+/* .motion */
+.motion {
+    padding: 100px 0; 
+}
+.motion .title {
+    text-align: center;
+    margin-bottom: 40px;    
+}
+.motion .title h3 {
+    font-size: 45px;
+}
+.motion .title p {
+    font-size: 20px;
+}
+.motion .list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.motion .list li {
+    cursor: pointer;
+    /* 마우스모양 : 손모양 */
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #ccc;
+    padding: 0 30px;
+    margin: 0 5px;
+    box-sizing: border-box;
+}
+.motion .list li.on {
+    box-shadow: 2px 3px 5px rgb(165, 165, 165);
+    /* 그림자 : x축 y축 블러 색상 */
+    background-color: #97918d;
+    color: #d4cbc6;
+    border: 0;
+}
+.motion .motion_cont .list_cont {
+    width: 1280px;
+    margin: 0 auto;
+    /* display: flex; */
+    display: none;
+    justify-content: space-between;
+}
+.motion .motion_cont .list_cont.on {
+    display: flex;
+}
+.motion .motion_cont .list_cont .items {
+    width: 49%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;   
+}
+/* 유튜브 영상 크기 조절 */ 
+.youtube {
+    width: 100%;
+}
+.youtube .youtube_in {
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 화면비율 16:9 비율 */
+    /* position:relative */
+    position: relative;
+}
+.youtube .youtube_in iframe {
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.motion .list_cont .items .info  {
+    padding: 30px 0 30px 0;
+}
+.motion .list_cont .items .info h4 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.motion .list_cont .items .info dl {
+    display: flex;
+    margin-top: 10px;
+}
+.motion .list_cont .items .info dl dt {
+    width: 25%;
+    font-weight: bold;
+}
+.motion .list_cont .items .info dl dd:hover a {
+    text-decoration: underline;
+}
+
+/* .g_ver05 */
+.g_ver05 {
+    background-color: #d4cbc6;
+    padding: 100px 0;
+}
+.g_ver05 .title {
+    text-align: center;
+    width: 1280px;
+    margin: 0 auto;
+}
+.g_ver05 .title h3 {
+    font-size: 45px;
+}
+.g_ver05 .title p {
+    font-size: 20px;
+}
+.g_ver05 .title em {
+    font-size: 13px;
+    text-align: right;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: block;
+    /* 글자 크기 : 13px
+    텍스트 오른쪽 정렬
+    외부여백 위로 40px
+    외부여백 아래로 10p0-9x */ 
+}
+
+/* .g_ver02 */
+.g_ver02 {
+    background: url('images/visual1-3.jpg') center center / cover no-repeat; 
+    background-attachment: fixed;
+
+    padding: 100px 0;
+}
+.g_ver02 .title {
+    text-align: center;
+    color: #706b69;
+    width: 1280px;
+    margin: 0 auto;
+}
+.g_ver02 .title h3 {
+    font-size: 35px;
+}
+.g_ver02 .title {
+    font-size: 15px;
+}
+.g_ver02 .title em {
+    font-size: 13px;
+    text-align: right;
+    /* background-color: palevioletred; */
+    display: block;
+    margin: 40px 0 10px;
+}
+.g_ver02 .cont {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}    
+.g_ver02 .cont .items {
+    width: 23%;
+    background-color: #fff;
+}
+.g_ver02 .cont .items figure {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.g_ver02 .cont .items figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+.g_ver02 .cont .items .info {
+    padding: 20px;
+    background-color: #d4cbc6;
+}
+.g_ver02 .cont .items .info p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.g_ver02 .cont .items .info h4 {
+    font-size: 20px;
+}
+.g_ver02 .cont .items:hover figure img {
+    transform: scale(1.5);
+}
+
+
+/* .about */
+.about {
+    padding: 100px 0;
+}
+.about .cont {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .cont figure { 
+    width: 30%;
+    height: 500px;
+}
+.about .cont figure img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    margin-left: 40px;
+    padding: 50px;
+}
+.about .cont .info {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 60px;
+}
+.about .cont .info div {
+    width: 45%;
+    margin: 20px 0;
+    /* background-color: #ccc; */   
+}
+.about .cont .info div h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.about .cont .info div p {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.about .cont .info div dl dt {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.about .cont .info div dd {
+    font-size: 15px;
+}
+footer {
+    background-color: #97918d;
+    text-align: center;
+    color: rgb(228, 228, 228);
+    padding: 100px 0;
+}
+footer ul li {
+    width: 250px;
+    height: 50px;
+    border: 1px solid #d4cbc6;;
+    border-radius: 30px;
+    margin: 10px auto;
+    line-height: 50px;
+    
+    /* 가로 : 200px
+    세로 : 50px
+    글자 수직가운데정렬
+    테두리 : 1px solid 색상
+    모서리곡선 : 50px
+    외부여백 : 위아래 10px 좌우 자동*/
+}
+footer ul li a {color: rgb(228, 228, 228);}
+footer ul li:first-child {
+    background-color: #97918d;
+}
+footer ul li:first-child a {
+    /* 글자색상 조절 */
+}
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(196, 196, 196, 0.733);
+}
