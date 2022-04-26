@@ -1,5 +1,35 @@
 @charset "utf-8";
 
+body{
+    font-family: 'Pretendard-Thin';
+}
+.main_visual {
+    font-family: 'Pretendard-Light';
+}
+.g_ver02 .title h3 {
+    font-family: 'Pretendard-Light';
+}
+.best_v .title h3 {
+    font-family: 'Pretendard-Light';
+}
+.motion .title h3{
+    font-family: 'Pretendard-Light';
+}
+
+
+@font-face {
+    font-family: 'Pretendard-Thin';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Light';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
 
 * {margin: 0; padding: 0;}
 li {list-style: none;}
@@ -22,7 +52,10 @@ header div {
     justify-content: space-between;
 }
 header div h1 a {
-    font-size: 25px;
+    font-size: 20px;
+}
+header div h1 {
+    font-size: 20px;
 }
 header div a {
     font-size: 20px;
@@ -45,7 +78,6 @@ header div a {
     object-fit: cover;
 }
 .main_visual .title {
-    background-color: #d4cbc6; 
     width: 1280px;
     /* margin: 0 auto; */
     height: 100%;
@@ -62,11 +94,11 @@ header div a {
 }
 .main_visual .title h2{
     width: 100%;
-    font-size: 50px;
+    font-size: 35px;
 }
 .main_visual .title p {
     width: 100%;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 40px;
     padding-right: 50%;
 }
@@ -93,7 +125,7 @@ header div a {
     font-size: 40px;
 }
 .best_v .title p {
-    font-size: 20px;
+    font-size: 15px;
 }
 .best_v .cont {
     width: 1280px;
@@ -168,7 +200,7 @@ header div a {
     font-size: 45px;
 }
 .motion .title p {
-    font-size: 20px;
+    font-size: 15px;
 }
 .motion .list {
     display: flex;
@@ -181,7 +213,7 @@ header div a {
     height: 45px;
     line-height: 45px;
     border: 1px solid #ccc;
-    padding: 0 30px;
+    padding: 0 20px;
     margin: 0 5px;
     box-sizing: border-box;
 }
@@ -226,7 +258,7 @@ header div a {
     left: 0;
 }
 .motion .list_cont .items .info  {
-    padding: 30px 0 30px 0;
+    padding: 30px 0 30px 10px;
 }
 .motion .list_cont .items .info h4 {
     font-size: 25px;
@@ -242,34 +274,6 @@ header div a {
 }
 .motion .list_cont .items .info dl dd:hover a {
     text-decoration: underline;
-}
-
-/* .g_ver05 */
-.g_ver05 {
-    background-color: #d4cbc6;
-    padding: 100px 0;
-}
-.g_ver05 .title {
-    text-align: center;
-    width: 1280px;
-    margin: 0 auto;
-}
-.g_ver05 .title h3 {
-    font-size: 45px;
-}
-.g_ver05 .title p {
-    font-size: 20px;
-}
-.g_ver05 .title em {
-    font-size: 13px;
-    text-align: right;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    display: block;
-    /* 글자 크기 : 13px
-    텍스트 오른쪽 정렬
-    외부여백 위로 40px
-    외부여백 아래로 10p0-9x */ 
 }
 
 /* .g_ver02 */
@@ -296,7 +300,7 @@ header div a {
     text-align: right;
     /* background-color: palevioletred; */
     display: block;
-    margin: 40px 0 10px;
+    margin: 40px 20px 10px;
 }
 .g_ver02 .cont {
     width: 1280px;
@@ -306,7 +310,6 @@ header div a {
 }    
 .g_ver02 .cont .items {
     width: 23%;
-    background-color: #fff;
 }
 .g_ver02 .cont .items figure {
     width: 100%;
@@ -315,12 +318,14 @@ header div a {
 }
 .g_ver02 .cont .items figure img {
     width: 100%;
+    margin: 0 auto;
     height: 100%;
     object-fit: cover;
+    justify-content: space-between;
     transition: 1s;
 }
 .g_ver02 .cont .items .info {
-    padding: 20px;
+    padding: 20px 0 20px 10px;
     background-color: #d4cbc6;
 }
 .g_ver02 .cont .items .info p {
@@ -344,24 +349,22 @@ header div a {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .about .cont figure { 
-    width: 30%;
-    height: 500px;
+    width: 50%;
+    height: auto;
 }
 .about .cont figure img {
     width: 80%;
     height: 80%;
     object-fit: cover;
-    margin-left: 40px;
-    padding: 50px;
 }
 .about .cont .info {
     width: 55%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-right: 60px;
 }
 .about .cont .info div {
@@ -371,11 +374,7 @@ header div a {
 }
 .about .cont .info div h4 {
     font-size: 20px;
-    margin-bottom: 20px;
-}
-.about .cont .info div p {
-    font-size: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .about .cont .info div dl dt {
     margin-bottom: 5px;
@@ -426,18 +425,21 @@ footer p {
     /* 브라우저 너비 1280px 이하일 때 쓰는 스타일 */ 
     header div {width: 100%}
     .main_visual .title {width: 100%;}
-    .best_v .cont {width: 100%;}
+    .best_v .cont {width: 95%;}
     .motion_cont .list_cont {width: 100%;}
-    .g_ver02 .cont {width: 100%;}
+    .g_ver02 .cont {width: 95%;}
     .g_ver02 .title {width: 100%;}
-    .about .cont {width: 100%;}
-    .motion .motion_cont .list_cont {width: 100%;}
+    .about .cont {width: 95%;}
+    .motion .motion_cont .list_cont {width: 95%;}
 
 } /* 해상도 1280px 이하 */
 @media screen and (max-width: 960px) {
     
     .best_v .cont {flex-wrap : wrap;}
-    .best_v .cont .youtube {width: 100%;}
+    .best_v .cont .youtube {
+        width: 95%;
+        margin: 0 auto;
+    }
     .best_v .cont .info {
         width: 90%; 
         margin: 0 auto;
@@ -476,7 +478,7 @@ footer p {
     margin: 0 auto;
 }
 .about .cont .info {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 .bady {
@@ -484,3 +486,33 @@ footer p {
 }
 /* 해상도 960 이하 */
 }
+
+@media screen and (max-width:640px) {
+    section .title h3{
+        font-size: 30px !important;
+    }
+section .title p {
+    font-size: 16px !important;
+}
+.main_visual .title h2 {
+    font-size: 40px;
+}
+.motion .list_cont .items .info {
+    padding: 15px;
+} 
+.motion .list_cont .items .info dl dt {
+    width: 30%;
+}
+.motion .list_cont .items .info dl dd {
+    width: 70%;
+    word-break: break-all;
+    /* 줄바꿈 : 글자별 */
+} 
+.g_ver02 .cont .items figure {
+    height: 300px;
+    /*해상도 640 이하 */
+}
+.about .cont .info div h4 {margin-bottom: 10px;}
+.about .cont .info div p {font-size: 15px;}
+.about .cont .info div dl dt {font-size: 15px;}
+.about .cont .info div dl dd {font-size: 15px;}
