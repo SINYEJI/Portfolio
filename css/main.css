@@ -38,6 +38,8 @@ html, body {
     color: #706b69;
     /* min-width: 1280px; */
     background-color: #d4cbc6; 
+    overflow-x: hidden;
+    font-size: 17px;
 }
 
 /* header */
@@ -229,13 +231,16 @@ header div a {
     margin: 0 auto;
     /* display: flex; */
     display: none;
-    justify-content: space-between;
+    /* justify-content: space-between; *//* 하수정 */
+    justify-content: center; /* 하수정 */ 
 }
 .motion .motion_cont .list_cont.on {
     display: flex;
 }
 .motion .motion_cont .list_cont .items {
-    width: 49%;
+    /* width: 49%; */ /* 하수정 */ 
+    width: 65%; /* 하수정 */
+    margin: 0 0.5%; /* 하수정 */
     border: 1px solid #ccc;
     box-sizing: border-box;   
 }
@@ -309,7 +314,8 @@ header div a {
     justify-content: space-between;
 }    
 .g_ver02 .cont .items {
-    width: 23%;
+    /* width: 23%; */
+    width: 49%; /* 하수정 */
 }
 .g_ver02 .cont .items figure {
     width: 100%;
@@ -516,3 +522,5 @@ section .title p {
 .about .cont .info div p {font-size: 15px;}
 .about .cont .info div dl dt {font-size: 15px;}
 .about .cont .info div dl dd {font-size: 15px;}
+
+}
